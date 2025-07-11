@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+  width: 100%;
+}
+
+.edit-section-container {
+  margin: 1rem;
+  display: grid;
+  grid-template-rows: repeat(5, min(75px));
+  gap: 1rem;
+}
+
+.edit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  background-color: green;
+}
+
+.main-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-card > button {
+  width: 10%;
+  height: 40%;
+}
+
+.preview-section-container {
+  background-color: black;
+}
