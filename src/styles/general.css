@@ -1,3 +1,6 @@
-.gen-info {
-  background-color: black;
+.general-form {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
