@@ -1,0 +1,21 @@
+.education-form {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-self: center;
+  border: 2px black solid;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.education-item > button {
+  margin-bottom: 1rem;
+}

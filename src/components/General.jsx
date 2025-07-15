@@ -52,7 +52,7 @@ function ToggledGeneral({ form, setForm }) {
                         onChange={e => setForm({...form, linkedin: e.target.value})}
                     />
                 </label>
-                <button className='apply-button' type='submit'>Apply</button>
+                <button className='apply-button' type='submit'>OK</button>
             </form>
         </div>
     )
