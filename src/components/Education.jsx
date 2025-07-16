@@ -3,7 +3,7 @@ import '../styles/education.css'
 
 function EducationItem({ index, edu, setEducations }) {
 
-    const [isEditing, setIsEditing] = useState(false);
+    const [isEditing, setIsEditing] = useState(edu.school === '');
 
     function handleChange(e) {
         const {name, value} = e.target;
@@ -14,15 +14,28 @@ function EducationItem({ index, edu, setEducations }) {
         })
     }
 
-    function handleSubmit() {
+    function handleSubmit(e) {
+        e.preventDefault();
+        setIsEditing(!isEditing)
+    }
 
+    function handleDelete() {
+        setEducations(prev =>
+            [
+                ...prev.slice(0, index), ...prev.slice(index + 1)
+            ]
+        )
     }
 
     if(!isEditing) {
         return (
             <div className='education-item'>
                 <h3>{edu.degreeType} - {edu.degree}</h3>
-                <button onClick={() => setIsEditing(!isEditing)}>Edit</button>
+                <div className='education-edit-buttons'>
+                    <button onClick={() => setIsEditing(!isEditing)}>Edit</button>
+                    <button onClick={handleDelete}>Delete</button>
+                </div>
+
             </div>
         )
     }
@@ -69,17 +82,32 @@ function EducationItem({ index, edu, setEducations }) {
 }
 
 function EduSection({educations, setEducations}) {
+
+    function addEdu() {
+        const newEntry =
+            {
+                school: '',
+                degreeType: '',
+                degree: '',
+                date: ''
+            }
+        setEducations(prev => [...prev, newEntry])
+    }
+
     return (
         <div className='education-list'>
             {educations.map((edu, index) => (
-                <EducationItem
-                    key={index}
-                    index={index}
-                    edu={edu}
-                    setEducations={setEducations}
-                />
+                <>
+                    <EducationItem
+                        key={index}
+                        index={index}
+                        edu={edu}
+                        setEducations={setEducations}
+                    />
+                    <hr />
+                </>
             ))}
-            <button className='apply-button'>ADD</button>
+            <button className='apply-button' onClick={addEdu}>ADD</button>
         </div>
     )
 }
