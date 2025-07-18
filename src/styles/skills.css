@@ -1,0 +1,24 @@
+.skill-form {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.skill-input-div {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-form button {
+  margin-top: 0.5rem;
+  height: 2.5rem;
+}
