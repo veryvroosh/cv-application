@@ -177,8 +177,8 @@ function Experience() {
     const [showMore, setShowMore] = useState(false);
     const [experiences, setExperiences] = useState([
         {
-            title: 'The Odin Project',
-            workplace: 'Self Taught',
+            title: 'Web Developer',
+            workplace: 'The Odin Project',
             fromDate: 'Sep 2024',
             toDate: 'Present',
             description: ["Developed several full-stack web applications using HTML, CSS, JavaScript"]
