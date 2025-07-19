@@ -1,0 +1,45 @@
+.experience-form {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-self: center;
+  border: 2px black solid;
+  border-radius: 15px;
+  align-self: center;
+}
+
+.experience-item > button {
+  margin-bottom: 1rem;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-edit-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.desc-input-div {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-form button {
+  margin-top: 0.5rem;
+  height: 2.5rem;
+}
