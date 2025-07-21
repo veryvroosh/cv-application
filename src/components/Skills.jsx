@@ -79,14 +79,9 @@ function SkillsSection({skills, setSkills}) {
     )
 }
 
-function Skills() {
+function Skills({ skills, setSkills }) {
 
     const [showMore, setShowMore] = useState(false);
-    const [skills, setSkills] = useState({
-        expertise: ["Version Control"],
-        software: ["Github"],
-        languages: ["JavaScript"]
-    })
 
     function handleShowMore() {
         setShowMore(!showMore)

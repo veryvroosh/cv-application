@@ -112,16 +112,8 @@ function EduSection({educations, setEducations}) {
     )
 }
 
-function Education() {
+function Education({ educations, setEducations }) {
     const [showMore, setShowMore] = useState(false);
-    const [educations, setEducations] = useState([
-        {
-            school: 'Istanbul Aydin University',
-            degreeType: 'Bachelors',
-            degree: 'Computer Engineering',
-            date: 'Est. June 2027'
-        }
-    ])
 
     function handleShowMore() {
         setShowMore(!showMore)

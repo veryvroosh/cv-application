@@ -165,16 +165,8 @@ function ProjSection({projects, setProjects}) {
     )
 }
 
-function Projects() {
+function Projects({ projects, setProjects }) {
     const [showMore, setShowMore] = useState(false);
-    const [projects, setProjects] = useState([
-        {
-            title: 'myLibrary',
-            link: 'github.com/Melovii/myLibrary',
-            date: 'May 2025',
-            description: ["A simple Node.js + Express + MySQL project to manage your library of books"]
-        }
-    ])
 
     function handleShowMore() {
         setShowMore(!showMore)

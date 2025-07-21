@@ -173,17 +173,8 @@ function ExpSection({experiences, setExperiences}) {
     )
 }
 
-function Experience() {
+function Experience({ experiences, setExperiences }) {
     const [showMore, setShowMore] = useState(false);
-    const [experiences, setExperiences] = useState([
-        {
-            title: 'Web Developer',
-            workplace: 'The Odin Project',
-            fromDate: 'Sep 2024',
-            toDate: 'Present',
-            description: ["Developed several full-stack web applications using HTML, CSS, JavaScript"]
-        }
-    ])
 
     function handleShowMore() {
         setShowMore(!showMore)

@@ -1,0 +1,49 @@
+.cv-preview h1,
+.cv-preview h2,
+.cv-preview h3,
+.cv-preview h4,
+.cv-preview h5,
+.cv-preview h6,
+.cv-preview p,
+.cv-preview hr {
+  margin: 0.5rem;
+}
+
+.cv-preview hr {
+  border: none;
+  margin: 0 0.5rem 0 0.5rem;
+  border-top: 2px solid black;
+}
+
+.cv-preview .main-header {
+  margin-top: 1rem;
+}
+
+.general-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.general-links a {
+  all: unset;
+  color: #0000EE;
+  cursor: pointer;
+}
+
+.general-info p {
+  margin: 0 0 0.5rem 0;
+}
+
+.cv-preview .main-header {
+  margin-bottom: 0;
+}
+
+.education p {
+  margin-bottom: 0;
+}
+
+.school-date {
+  display: flex;
+  justify-content: space-between;
+}

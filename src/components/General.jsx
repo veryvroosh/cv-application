@@ -58,17 +58,9 @@ function ToggledGeneral({ form, setForm }) {
     )
 }
 
-function General() {
+function General({ form, setForm }) {
 
     const [showMore, setShowMore] = useState(false);
-    const [form, setForm] = useState({
-        firstName: 'Zaid',
-        lastName: 'Safadi',
-        cityCountry: 'Istanbul, Turkey',
-        email: 'veryvroosh@gmail.com',
-        github: 'github.com/veryvroosh',
-        linkedin: 'linkedin.com/in/mhd-zaid-safadi/'
-    })
 
     function handleShowMore() {
         setShowMore(!showMore)

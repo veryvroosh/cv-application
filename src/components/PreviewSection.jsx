@@ -1,9 +1,9 @@
 import Preview from './Preview.jsx'
 
-function PreviewSection() {
+function PreviewSection(props) {
     return (
         <div className="preview-section-container">
-            <Preview />
+            <Preview {...props} />
         </div>
     )
 }

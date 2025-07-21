@@ -83,13 +83,28 @@ body {
 }
 
 .preview-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100dvh;
   background-color: black;
+}
+
+.cv-preview {
+  font-size: 18px;
+  width: 794px;
+  height: 1123px;
+  background-color: green;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0.85);
+  transform-origin: top center;
+  padding: 1rem;
+  margin: 2rem 0 2rem 0;
 }
 
 hr {
   border: none;
   border-top: 2px solid #b0b0b0;
-  border-radius: 25px;
   margin: 2rem 0;
 }
 
