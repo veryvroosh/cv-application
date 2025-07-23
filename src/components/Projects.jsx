@@ -94,6 +94,14 @@ function ProjectItem({ index, proj, setProjects }) {
                     />
                 </label>
                 <label>
+                    Short Summary:{' '}
+                    <input
+                        name="summary"
+                        value={proj.summary}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
                     Link:{' '}
                     <input
                         name="link"
@@ -140,6 +148,7 @@ function ProjSection({projects, setProjects}) {
         const newEntry =
             {
                 title: '',
+                summary: '',
                 link: '',
                 date: '',
                 description: []

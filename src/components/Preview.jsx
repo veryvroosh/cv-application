@@ -54,6 +54,7 @@ function Preview({ form, educations, skills, experiences, projects }) {
                             <p>{exp.title} | {exp.workplace}</p>
                             <p>{exp.fromDate} - {exp.toDate}</p>
                         </div>
+                        <p className='exp-summary'>{exp.summary}</p>
                         <ul>
                             {exp.description.map((desc, index) => (
                                 <li key={index}>{desc}</li>
@@ -69,7 +70,7 @@ function Preview({ form, educations, skills, experiences, projects }) {
                 {projects.map((proj, index) => (
                     <div className='project-item-prev' key={index}>
                         <div className='proj-date'>
-                            <p><a href={proj.link} target='_blank' rel='noopener noreferrer'>{proj.title}</a></p>
+                            <p><a href={proj.link} target='_blank' rel='noopener noreferrer'>{proj.title}</a> | {proj.summary}</p>
                             <p>{proj.date}</p>
                         </div>
                         <ul>

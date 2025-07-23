@@ -29,6 +29,7 @@ function App() {
     const [experiences, setExperiences] = useState([
         {
             title: 'Web Developer',
+            summary: 'Building full-stack web apps to develop and showcase web development skills',
             workplace: 'The Odin Project',
             fromDate: 'Sep 2024',
             toDate: 'Present',
@@ -38,6 +39,7 @@ function App() {
     const [projects, setProjects] = useState([
         {
             title: 'myLibrary',
+            summary: 'Book Library Database',
             link: 'https://github.com/Melovii/myLibrary',
             date: 'May 2025',
             description: ["A simple Node.js + Express + MySQL project to manage your library of books"]

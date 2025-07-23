@@ -50,6 +50,11 @@
   justify-content: space-between;
 }
 
+.cv-preview .exp-summary {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 .cv-preview ul {
   list-style-position: inside;
   padding: 0;
@@ -58,4 +63,8 @@
 
 .cv-preview li {
   margin-top: 0;
+}
+
+.cv-preview .skill-group p {
+  margin-bottom: 0;
 }

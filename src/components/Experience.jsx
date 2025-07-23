@@ -102,6 +102,14 @@ function ExperienceItem({ index, exp, setExperiences }) {
                     />
                 </label>
                 <label>
+                    Short Summary:{' '}
+                    <input
+                        name="summary"
+                        value={exp.summary}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
                     From Date:{' '}
                     <input
                         name="fromDate"
@@ -147,6 +155,7 @@ function ExpSection({experiences, setExperiences}) {
         const newEntry =
             {
                 title: '',
+                summary: '',
                 workplace: '',
                 fromDate: '',
                 toDate: '',
