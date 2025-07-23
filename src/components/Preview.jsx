@@ -1,6 +1,6 @@
 import '../styles/preview.css'
 
-function Preview({ form, educations, skills, experience, projects }) {
+function Preview({ form, educations, skills, experiences, projects }) {
     return(
         <div className='cv-preview'>
             <div className='general-info'>
@@ -27,23 +27,60 @@ function Preview({ form, educations, skills, experience, projects }) {
                             <p>{edu.date}</p>
                         </div>
                         <p>{edu.degreeType} | {edu.degree}</p>
-                        <br />
+                        <br/>
                     </div>
                 ))}
             </div>
             <h2 className='main-header'>Skills</h2>
-            <hr />
+            <hr/>
             {Object.entries(skills).map(([category, items]) => (
                 <div className='skill-group' key={category}>
                     <p>{category.charAt(0).toUpperCase() + category.slice(1)}: {items.map((item, index) => (
-                            <span key={index}>
+                        <span key={index}>
                                 {item}
-                                {index < items.length - 1 && ' | '}
+                            {index < items.length - 1 && ' | '}
                             </span>
-                        ))}
+                    ))}
                     </p>
                 </div>
             ))}
+            <br/>
+            <h2 className='main-header'>Experience</h2>
+            <hr/>
+            <div className='experience'>
+                {experiences.map((exp, index) => (
+                    <div className='experience-item-prev' key={index}>
+                        <div className='exp-date'>
+                            <p>{exp.title} | {exp.workplace}</p>
+                            <p>{exp.fromDate} - {exp.toDate}</p>
+                        </div>
+                        <ul>
+                            {exp.description.map((desc, index) => (
+                                <li key={index}>{desc}</li>
+                            ))}
+                        </ul>
+                        <br/>
+                    </div>
+                ))}
+            </div>
+            <h2 className='main-header'>Projects</h2>
+            <hr/>
+            <div className='projects'>
+                {projects.map((proj, index) => (
+                    <div className='project-item-prev' key={index}>
+                        <div className='proj-date'>
+                            <p><a href={proj.link} target='_blank' rel='noopener noreferrer'>{proj.title}</a></p>
+                            <p>{proj.date}</p>
+                        </div>
+                        <ul>
+                            {proj.description.map((desc, index) => (
+                                <li key={index}>{desc}</li>
+                            ))}
+                        </ul>
+                        <br/>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

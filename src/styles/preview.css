@@ -5,7 +5,9 @@
 .cv-preview h5,
 .cv-preview h6,
 .cv-preview p,
-.cv-preview hr {
+.cv-preview hr,
+.cv-preview ul,
+.cv-preview li {
   margin: 0.5rem;
 }
 
@@ -25,7 +27,7 @@
   align-items: center;
 }
 
-.general-links a {
+.cv-preview a {
   all: unset;
   color: #0000EE;
   cursor: pointer;
@@ -43,7 +45,17 @@
   margin-bottom: 0;
 }
 
-.school-date {
+.school-date, .exp-date, .proj-date {
   display: flex;
   justify-content: space-between;
+}
+
+.cv-preview ul {
+  list-style-position: inside;
+  padding: 0;
+  margin-top: 0;
+}
+
+.cv-preview li {
+  margin-top: 0;
 }

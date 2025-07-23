@@ -38,7 +38,7 @@ function App() {
     const [projects, setProjects] = useState([
         {
             title: 'myLibrary',
-            link: 'github.com/Melovii/myLibrary',
+            link: 'https://github.com/Melovii/myLibrary',
             date: 'May 2025',
             description: ["A simple Node.js + Express + MySQL project to manage your library of books"]
         }
