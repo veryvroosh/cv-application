@@ -1,8 +1,7 @@
 import '../styles/preview.css'
-
-function Preview({ form, educations, skills, experiences, projects }) {
+function Preview({ form, educations, skills, experiences, projects, zoomLevel }) {
     return(
-        <div className='cv-preview'>
+        <div className='cv-preview' style={{transform: `scale(${zoomLevel})`, transformOrigin: 'top center'}}>
             <div className='general-info'>
                 <h1>{form.firstName} {form.lastName}</h1>
                 <div className='general-links'>
@@ -70,7 +69,8 @@ function Preview({ form, educations, skills, experiences, projects }) {
                 {projects.map((proj, index) => (
                     <div className='project-item-prev' key={index}>
                         <div className='proj-date'>
-                            <p><a href={proj.link} target='_blank' rel='noopener noreferrer'>{proj.title}</a> | {proj.summary}</p>
+                            <p><a href={proj.link} target='_blank'
+                                  rel='noopener noreferrer'>{proj.title}</a> | {proj.summary}</p>
                             <p>{proj.date}</p>
                         </div>
                         <ul>

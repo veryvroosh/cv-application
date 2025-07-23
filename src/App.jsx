@@ -45,6 +45,7 @@ function App() {
             description: ["A simple Node.js + Express + MySQL project to manage your library of books"]
         }
     ]);
+    const [zoomLevel, setZoomLevel] = useState(0.9);
 
     return (
       <div className={"app"}>
@@ -59,6 +60,8 @@ function App() {
               setExperiences={setExperiences}
               projects={projects}
               setProjects={setProjects}
+              zoomLevel={zoomLevel}
+              setZoomLevel={setZoomLevel}
           />
           <PreviewSection
               form={form}
@@ -66,6 +69,7 @@ function App() {
               skills={skills}
               experiences={experiences}
               projects={projects}
+              zoomLevel={zoomLevel}
           />
       </div>
     )
