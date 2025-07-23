@@ -11,15 +11,36 @@ body {
 }
 
 .edit-section-container {
+  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 1rem;
-  display: grid;
-  grid-template-rows: repeat(5, max-content);
+  /*display: grid;*/
+  /*grid-template-rows: repeat(5, max-content);*/
+  display: flex;             /* 👈 Changed from grid */
+  flex-direction: column;
   gap: 1rem;
   height: 100%;
   box-sizing: border-box;
   background-color: white;
+}
+
+.zoom-slider {
+  font-size: 1.25rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;        /* pushes it to bottom of scroll */
+  align-self: center;      /* centers it horizontally */
+  /*background-color: #f0f0f0;*/
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid black
+}
+
+.zoom-slider input {
+  width: 100%;
 }
 
 .edit-card {
@@ -103,12 +124,13 @@ body {
   font-size: 18px;
   width: 794px;
   height: 1123px;
-  background-color: green;
+  background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transform: scale(0.85);
   transform-origin: top center;
   padding: 1rem;
   margin: 2rem 0;
+  user-select: none;
 }
 
 hr {

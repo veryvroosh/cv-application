@@ -7,17 +7,21 @@ function Preview({ form, educations, skills, experiences, projects, zoomLevel })
                 <div className='general-links'>
 
                     <p>
-                        <a href={form.email} target='_blank' rel='noopener noreferrer'>Email</a> |
-                        <a href={form.github} target='_blank' rel='noopener noreferrer'> GitHub</a> |
-                        <a href={form.linkedin} target='_blank' rel='noopener noreferrer'> LinkedIn</a>
+                        {form.email && <a href={form.email} target='_blank' rel='noopener noreferrer'>Email </a>}
+                        {form.github && <a href={form.github} target='_blank' rel='noopener noreferrer'> GitHub </a>}
+                        {form.linkedin && <a href={form.linkedin} target='_blank' rel='noopener noreferrer'> LinkedIn </a>}
                     </p>
 
                 </div>
-                <p>{form.cityCountry}</p>
+                {form.cityCountry && <p>{form.cityCountry}</p>}
             </div>
             <br/>
-            <h2 className='main-header'>Education</h2>
-            <hr/>
+            {educations.length > 0 &&
+                <div className='cv-preview-header-div'>
+                    <h2 className='main-header'>Education</h2>
+                    <hr/>
+                </div>
+            }
             <div className='education'>
                 {educations.map((edu, index) => (
                     <div className='education-item-prev' key={index}>
@@ -30,8 +34,10 @@ function Preview({ form, educations, skills, experiences, projects, zoomLevel })
                     </div>
                 ))}
             </div>
-            <h2 className='main-header'>Skills</h2>
-            <hr/>
+            <div className='cv-preview-header-div'>
+                <h2 className='main-header'>Skills</h2>
+                <hr/>
+            </div>
             {Object.entries(skills).map(([category, items]) => (
                 <div className='skill-group' key={category}>
                     <p>{category.charAt(0).toUpperCase() + category.slice(1)}: {items.map((item, index) => (
@@ -44,8 +50,12 @@ function Preview({ form, educations, skills, experiences, projects, zoomLevel })
                 </div>
             ))}
             <br/>
-            <h2 className='main-header'>Experience</h2>
-            <hr/>
+            {experiences.length > 0 &&
+                <div className='cv-preview-header-div'>
+                    <h2 className='main-header'>Experience</h2>
+                    <hr/>
+                </div>
+            }
             <div className='experience'>
                 {experiences.map((exp, index) => (
                     <div className='experience-item-prev' key={index}>
@@ -63,8 +73,12 @@ function Preview({ form, educations, skills, experiences, projects, zoomLevel })
                     </div>
                 ))}
             </div>
-            <h2 className='main-header'>Projects</h2>
-            <hr/>
+            {projects.length > 0 &&
+                <div className='cv-preview-header-div'>
+                    <h2 className='main-header'>Projects</h2>
+                    <hr/>
+                </div>
+            }
             <div className='projects'>
                 {projects.map((proj, index) => (
                     <div className='project-item-prev' key={index}>

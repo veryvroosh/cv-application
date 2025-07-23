@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import '../styles/general.css'
 
-function ToggledGeneral({ form, setForm }) {
+function ToggledGeneral({ form, setForm, showMore, setShowMore }) {
 
     function handleSubmit() {
-
+        setShowMore(!showMore)
     }
 
     return (
@@ -52,7 +52,7 @@ function ToggledGeneral({ form, setForm }) {
                         onChange={e => setForm({...form, linkedin: e.target.value})}
                     />
                 </label>
-                <button className='apply-button' type='submit'>OK</button>
+                <button className='apply-button' type='button' onClick={handleSubmit}>OK</button>
             </form>
         </div>
     )
@@ -74,7 +74,7 @@ function General({ form, setForm }) {
                     {showMore ? 'Hide' : 'Show'}
                 </button>
             </div>
-            {showMore && <ToggledGeneral form={form} setForm={setForm}/>}
+            {showMore && <ToggledGeneral form={form} setForm={setForm} showMore={showMore} setShowMore={setShowMore}/>}
         </div>
     )
 }

@@ -6,25 +6,25 @@ import {useState} from "react";
 function App() {
 
     const [form, setForm] = useState({
-        firstName: 'Zaid',
-        lastName: 'Safadi',
-        cityCountry: 'Istanbul, Turkey',
-        email: 'veryvroosh@gmail.com',
+        firstName: 'John',
+        lastName: 'Pencil',
+        cityCountry: 'Kyoto, Japan',
+        email: 'penisjohn@gmail.com',
         github: 'https://github.com/veryvroosh',
-        linkedin: 'https://linkedin.com/in/mhd-zaid-safadi/'
+        linkedin: ''
     });
     const [educations, setEducations] = useState([
         {
-            school: 'Istanbul Aydin University',
+            school: 'Fredrick National University',
             degreeType: 'Bachelors',
             degree: 'Computer Engineering',
             date: 'Est. June 2027'
         }
     ]);
     const [skills, setSkills] = useState({
-        expertise: ["Version Control"],
-        software: ["Github"],
-        languages: ["JavaScript"]
+        expertise: ["Version Control", "OOP", "Databases"],
+        software: ["Github", "IntelliJ IDEA"],
+        languages: ["JavaScript", "React", "SQL"]
     });
     const [experiences, setExperiences] = useState([
         {
@@ -33,7 +33,9 @@ function App() {
             workplace: 'The Odin Project',
             fromDate: 'Sep 2024',
             toDate: 'Present',
-            description: ["Developed several full-stack web applications using HTML, CSS, JavaScript"]
+            description: ["Developed several full-stack web applications using HTML, CSS, JavaScript",
+                          "Worked on group projects, improving communication and learning from others' feedback"
+            ]
         }
     ]);
     const [projects, setProjects] = useState([
